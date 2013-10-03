@@ -1,0 +1,36 @@
+<osm version="0.6" generator="Osmosis SNAPSHOT-r26564">
+<node id="259028168" version="1" timestamp="2008-04-21T15:18:47Z" uid="32332" user="reiLento" changeset="218085" lat="45.7820267" lon="4.8771826">
+<tag k="created_by" v="Potlatch 0.8a"/>
+<tag k="amenity" v="recycling"/>
+</node>
+<node id="299548378" version="1" timestamp="2008-09-24T20:21:53Z" uid="32332" user="reiLento" changeset="691433" lat="45.7783693" lon="4.8749162">
+<tag k="created_by" v="Potlatch 0.10b"/>
+<tag k="amenity" v="recycling"/>
+</node>
+<node id="299549001" version="1" timestamp="2008-09-24T20:22:49Z" uid="32332" user="reiLento" changeset="691433" lat="45.7822961" lon="4.8782292">
+<tag k="created_by" v="Potlatch 0.10b"/>
+<tag k="amenity" v="recycling"/>
+</node>
+<node id="300855624" version="1" timestamp="2008-09-29T14:05:06Z" uid="32332" user="reiLento" changeset="718286" lat="45.7812158" lon="4.8846914">
+<tag k="created_by" v="Potlatch 0.10c"/>
+<tag k="amenity" v="recycling"/>
+</node>
+<node id="301355875" version="2" timestamp="2010-11-12T17:51:06Z" uid="292987" user="Benoît Monin" changeset="6352537" lat="45.7782014" lon="4.8793903">
+<tag k="amenity" v="recycling"/>
+</node>
+<node id="301355877" version="2" timestamp="2011-07-13T12:28:31Z" uid="10209" user="ryra6453" changeset="8712174" lat="45.7796939" lon="4.8816357">
+<tag k="amenity" v="recycling"/>
+</node>
+<node id="309603636" version="2" timestamp="2011-04-03T16:29:53Z" uid="10209" user="ryra6453" changeset="7756151" lat="45.7828669" lon="4.8798103">
+<tag k="amenity" v="recycling"/>
+</node>
+<node id="669959323" version="1" timestamp="2010-03-19T21:14:40Z" uid="231539" user="Xapitoun" changeset="4174454" lat="45.7764662" lon="4.8670373">
+<tag k="recycling:glass" v="yes"/>
+<tag k="amenity" v="recycling"/>
+</node>
+<node id="669959327" version="2" timestamp="2011-09-11T22:58:36Z" uid="515998" user="LQui" changeset="9276173" lat="45.7786343" lon="4.8698886">
+<tag k="recycling_type" v="container"/>
+<tag k="recycling:glass" v="yes"/>
+<tag k="amenity" v="recycling"/>
+</node>
+</osm>

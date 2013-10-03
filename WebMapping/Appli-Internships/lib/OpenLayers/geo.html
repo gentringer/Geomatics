@@ -1,0 +1,188 @@
+<html>
+<head>
+
+<title> A Basic GeoExt Page </title>
+<script src="./ext/adapter/ext/ext-base.js" type="text/javascript"></script>
+<script src="./ext/ext-all.js"  type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="./ext/resources/css/ext-all.css"></link>
+<script src="./OpenLayers/OpenLayers.js" type="text/javascript"></script>
+<script src="./GeoExt/lib/GeoExt.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="./GeoExt/resources/css/geoext-all-debug.css"></link>
+
+<script type="text/javascript">
+    Ext.onReady(function() {
+        var map = new OpenLayers.Map();
+        var layer = new OpenLayers.Layer.WMS(
+            "Global Imagery",
+            "http://maps.opengeo.org/geowebcache/service/wms",
+            {layers: "bluemarble"}
+        );
+        
+        map.addLayer(layer);
+
+        var mapPanel = new GeoExt.MapPanel({
+    renderTo: 'gxmap',
+    region: 'center',
+    height: 400,
+    width: 600,
+    map: map,
+    title: 'A Simple GeoExt Map'
+});
+    });
+var mapPanel = new GeoExt.MapPanel({
+    /* Your configuration here */
+});    
+    new Ext.grid.GridPanel({
+    renderTo: 'layerlist',
+    height: 200, width: 200,
+    autoScroll: true,
+    store: mapPanel.layers,
+    columns: [{name: 'name', heading: 'Name'}]
+});
+
+
+
+var layerList = new GeoExt.tree.LayerContainer({
+    text: 'All Layers',
+    layerStore: mapPanel.layers,
+    leaf: false,
+    expanded: true
+});
+
+var layerTree = new Ext.tree.TreePanel({
+    title: 'Map Layers',
+    renderTo: 'layerTree',
+    root: layerList
+});
+
+var layerList = new GeoExt.tree.LayerContainer({
+    text: 'Tasmania Layers',
+    layerStore: mapPanel.layers,
+    leaf: false,
+    expanded: true,
+    loader: {
+        filter: function(record) {
+            return record.get("layer").name.indexOf("Tasmania") !== -1
+        }
+    }
+});
+
+var layerList = new GeoExt.tree.LayerContainer({
+    text: 'Tasmania Layers',
+    layerStore: mapPanel.layers,
+    leaf: false,
+    expanded: true,
+    loader: {
+        filter: function(record) {
+            return record.get("layer").name.indexOf("Tasmania") !== -1
+        },
+        baseAttrs: {
+            checkedGroup: "tasmania"
+        }
+    }
+});
+
+var layerList = new GeoExt.tree.LayerContainer({
+    text: 'All Layers',
+    layerStore: mapPanel.layers,
+    leaf: false,
+    expanded: true,
+    loader: {
+        baseAttrs: {
+            radioGroup: "active"
+        }
+    }
+});
+var registerRadio = function(node){
+    if(!node.hasListener("radiochange")) {
+        node.on("radiochange", function(node){
+            /* set your active layer here */
+        });
+    }
+}
+var layerTree = new Ext.tree.TreePanel({
+    title: 'Map Layers',
+    renderTo: 'layerTree',
+    root: layerList,
+    listeners: {
+        append: registerRadio,
+        insert: registerRadio
+    }
+});
+
+var groupLayer = new OpenLayers.Layer.WMS("Tasmania (Group Layer)",
+    "http://demo.opengeo.org/geoserver/wms", {
+        layers: [
+            "topp:tasmania_state_boundaries",
+            "topp:tasmania_water_bodies",
+            "topp:tasmania_cities",
+            "topp:tasmania_roads"
+        ],
+        transparent: true,
+        format: "image/gif"
+    }
+);
+var groupLayerNode = new GeoExt.tree.LayerNode({
+    layer: groupLayer,
+    leaf: false,
+    expanded: true,
+    loader: {
+        param: "LAYERS"
+    }
+});
+
+var length = new OpenLayers.Control.Measure(OpenLayers.Handler.Path, {
+    eventListeners: {
+        measure: function(evt) {
+            alert("The length was " + evt.measure + evt.units);
+        }
+    }
+});
+
+var area = new OpenLayers.Control.Measure(OpenLayers.Handler.Polygon, {
+    eventListeners: {
+        measure: function(evt) {
+            alert("The area was " + evt.measure + evt.units);
+        }
+    }
+});
+
+mapPanel.map.addControl(length);
+mapPanel.map.addControl(area);
+
+var toggleGroup = "measure controls";
+
+var lengthButton = new Ext.Button({
+    text: 'Measure Length',
+    enableToggle: true,
+    toggleGroup: toggleGroup,
+    handler: function(toggled){
+        if (toggled) {
+            length.activate();
+        } else {
+            length.deactivate();
+        }
+    }
+});
+
+var area = new Ext.Button({
+    text: 'Measure Area',
+    enableToggle: true,
+    toggleGroup: toggleGroup,
+    handler: function(toggled){
+        if (toggled) {
+            area.activate();
+        } else {
+            area.deactivate();
+        }
+    }
+});
+
+</script>
+</head>
+<body>
+<div id="gxmap"></div>
+<div id='layerlist'></div>
+
+</body>
+</html>

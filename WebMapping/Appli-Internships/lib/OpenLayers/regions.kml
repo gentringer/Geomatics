@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.2">
+<Document>
+	<name>regions.kml</name>
+	<Folder>
+		<name>Régions</name>
+		<Placemark>
+			<name>Bretagne</name>
+			<Polygon>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+-4.83502,48.64811,0 -4.91192,47.85072,0 -2.73663,47.34696,0 -1.23150,47.82860,0 -1.07769,48.49545,0 -1.82476,48.79307,0 -3.09918,49.01693,0</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>Languedoc-Roussillon</name>
+			<Polygon>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+2.95429,44.66938,0 3.22895,43.93029,0 2.31708,43.51743,0 1.65790,43.41378,0 1.71284,42.44043,0 3.18500,42.39177,0 3.65742,43.32593,0 4.27265,43.42973,0 4.86591,44.00936,0 3.63544,45.00438,0 3.06145,44.91109,0</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+	</Folder>
+</Document>
+</kml>

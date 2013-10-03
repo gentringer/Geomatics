@@ -1,0 +1,4 @@
+AuthName "Veuillez vous identifier"
+AuthType Basic
+AuthUserFile "/home/stagesgeom/.htpasswd"
+Require valid-user

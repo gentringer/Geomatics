@@ -1,0 +1,5 @@
+lon	lat	title	description	icon
+3.87611	43.60118	Parking de la gare	Ville : Montpellier, Places : 500	marker_red.png
+4.89282	44.92756	Parking de la gare	Ville : Valence, Places : 200	marker_blue.png
+2.32417	48.87066	Parking de la Madeleine	Ville : Paris, Places : 750	marker_red.png
+-4.48083	48.38717	Parking de la gare	Ville : Brest, Places : 120	marker_blue.png

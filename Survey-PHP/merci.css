@@ -1,0 +1,168 @@
+body
+{
+   width: auto;
+   margin: auto;
+   margin-top: 10px;
+   margin-bottom: 20px;    
+   background-color: rgb(9,153,81);
+}
+
+.image
+{
+text-align: center;
+    margin-bottom: 20px;
+}
+
+
+
+#corps
+{
+   margin-left: 250px;
+   margin-right: 250px;
+   margin-bottom: 0px;
+   padding: 5px;
+   
+   color: white;
+   background-color: rgb(255,248,242);  
+   background-repeat: repeat-x;
+   
+   border-style:solid;
+   border-width:3px;
+   border-color:black;
+   
+}
+
+.corps2
+{
+height: 150px;
+margin-left: -5px;
+   margin-right: -5px;
+   margin-bottom: 20px;
+   margin-top: -5px;
+   padding: 0px;
+   
+   color: white;
+   background-image: url("MONTPELLIER_NORD.jpg");
+ 
+ border-color: rgb(230,227,227);
+   border-style:solid;
+   border-width:1px;
+   
+   border-bottom-style: solid;
+   border-bottom-color: black; 
+   border-bottom-width:5px;
+
+ }
+ 
+ .corps3
+{
+margin-left: 20px;
+   margin-right: 20px;
+   margin-bottom: 15px;
+   margin-top: 15px;
+      background-color: rgb(9,153,81);   
+    border-style:solid;
+   border-width:2px;
+   border-color: rgb(9,153,81);  
+
+ }
+
+#corps h1
+{
+   color: rgb(9,153,81);
+   text-align: center;
+   font-family: Comic Sans MS;
+}
+
+#corps h2
+{
+  color: Black;
+   text-align: left;
+      margin-top: 10px;
+text-align: center;
+   margin-bottom: 10px;
+      
+font-size: 25px;
+
+   font-family: Arial;
+
+}
+
+#corps h3
+{
+   margin-top: 10px;
+   	  margin-left: 20px;
+   	  margin-right: 20px;
+
+   margin-bottom: 15px;
+
+   color: black;
+      font-weight: bold;
+text-align: left;
+   font-size: 19px;
+   font-family: Arial;
+
+}
+
+#corps h4
+{
+   margin-top: 1px;
+   	  margin-left: 20px;
+   	  margin-right: 20px;
+
+   margin-bottom: 1px;
+
+   color: black;
+   text-align: left;
+   font-size: 15px;
+   font-family: Comic Sans MS;
+   
+}
+
+#source h6
+{
+   margin-top: 0px;
+   margin-left: 0px;
+   margin-right: 20px;
+   margin-bottom: 0
+   color: black;
+   text-align: left;
+   font-size: 10px;
+   font-family: Comic Sans MS;
+   
+}
+
+.sub{
+ background-color:white;
+ color:rgb(9,153,81);
+     border-style:solid;
+   border-width:2px;
+   border-color: rgb(9,153,81);  
+
+   -moz-border-radius: 30px;
+        -webkit-border-radius: 30px;
+        border-radius: 30px;
+ }
+
+.submit
+{
+text-align:center;
+}
+
+.sub:hover
+{
+background-color:rgb(9,153,81);
+color:white;
+style=cursor:pointer;
+
+}
+
+
+#source
+{
+   margin-left: 250px;
+   margin-right: 250px;
+   margin-bottom: 20px;
+   background-color: rgb(9,153,81);
+   
+}
